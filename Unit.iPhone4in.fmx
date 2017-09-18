@@ -1,0 +1,49 @@
+inherited MainForm_iPhone4in: TMainForm_iPhone4in
+  ClientHeight = 548
+  ClientWidth = 320
+  DesignerMasterStyle = 0
+  inherited AuthBox: TGroupBox
+    inherited AdressEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited LoginEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited PassEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+  end
+  inherited SettingBox: TGroupBox
+    inherited MinEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited FileEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited PlayButton: TButton
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+    end
+    inherited StopButton: TButton
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+    end
+    inherited KolEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+  end
+  inherited ToolBar: TToolBar
+    Position.Y = 504.000000000000000000
+    Size.Width = 320.000000000000000000
+    Size.Height = 44.000000000000000000
+    inherited MenuButton: TSpeedButton
+      Position.X = 271.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+    end
+  end
+  inherited ListBox: TListBox
+    Viewport.Width = 156.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+end

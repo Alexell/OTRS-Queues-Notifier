@@ -1,0 +1,122 @@
+inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
+  ClientHeight = 695
+  ClientWidth = 450
+  DesignerMasterStyle = 0
+  inherited Timer: TTimer
+    Top = 448
+  end
+  inherited Player: TMediaPlayer
+    Top = 456
+  end
+  inherited OpenDialog: TOpenDialog
+    Top = 456
+  end
+  inherited AuthBox: TGroupBox
+    Size.Width = 433.000000000000000000
+    Size.Height = 177.000000000000000000
+    inherited Label2: TLabel
+      Position.Y = 96.000000000000000000
+    end
+    inherited Label3: TLabel
+      Position.Y = 128.000000000000000000
+    end
+    inherited AdressEdit: TEdit
+      Size.Height = 32.000000000000000000
+    end
+    inherited LoginEdit: TEdit
+      Position.Y = 96.000000000000000000
+      Size.Width = 289.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+    inherited PassEdit: TEdit
+      Position.Y = 128.000000000000000000
+      Size.Width = 289.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+    inherited Label7: TLabel
+      Position.Y = 56.000000000000000000
+      Size.Width = 265.000000000000000000
+    end
+  end
+  inherited SettingBox: TGroupBox
+    Position.Y = 208.000000000000000000
+    Size.Width = 433.000000000000000000
+    Size.Height = 169.000000000000000000
+    inherited MinEdit: TEdit
+      Position.X = 200.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+    inherited Label4: TLabel
+      Size.Width = 185.000000000000000000
+      Size.Height = 33.000000000000000000
+    end
+    inherited Label6: TLabel
+      Size.Width = 257.000000000000000000
+    end
+    inherited FileEdit: TEdit
+      Position.X = 280.000000000000000000
+      Size.Width = 113.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+    inherited OpenButton: TButton
+      Position.X = 400.000000000000000000
+    end
+    inherited PlayButton: TButton
+      Position.X = 280.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+    inherited StopButton: TButton
+      Position.X = 344.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+    inherited Label8: TLabel
+      Size.Width = 297.000000000000000000
+    end
+    inherited KolEdit: TEdit
+      Position.X = 320.000000000000000000
+      Size.Height = 32.000000000000000000
+    end
+  end
+  inherited StartButton: TButton
+    Position.X = 152.000000000000000000
+    Position.Y = 392.000000000000000000
+  end
+  inherited TicketLabel: TLabel
+    Position.X = 152.000000000000000000
+    Position.Y = 432.000000000000000000
+  end
+  inherited KolLabel: TLabel
+    Position.X = 280.000000000000000000
+    Position.Y = 432.000000000000000000
+  end
+  inherited Label5: TLabel
+    Position.X = 248.000000000000000000
+    Position.Y = 232.000000000000000000
+    Size.Height = 33.000000000000000000
+  end
+  inherited ShowPassButton: TButton
+    Position.X = 408.000000000000000000
+    Position.Y = 136.000000000000000000
+    Size.Height = 33.000000000000000000
+  end
+  inherited ToolBar: TToolBar
+    Position.Y = 647.000000000000000000
+    Size.Width = 450.000000000000000000
+    Size.Height = 48.000000000000000000
+    inherited MenuButton: TSpeedButton
+      Position.X = 397.000000000000000000
+      Size.Width = 48.000000000000000000
+      Size.Height = 48.000000000000000000
+    end
+  end
+  inherited ListBox: TListBox
+    Viewport.Width = 156.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+  inherited WebCookie: TIdCookieManager
+    Top = 448
+  end
+  inherited Web: TIdHTTP
+    Top = 448
+  end
+end

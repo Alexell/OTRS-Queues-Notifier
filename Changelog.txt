@@ -1,0 +1,10 @@
+OTRS Queues Notifier v1.0 (27.04.2016)
+------------------------------------------
+
+- Authorization in OTRS
+- Saving and reading settings from the ini file
+- Update interval setting
+- Indication of the number of tickets, upon reaching which the audio notification will turn on
+------------------------------------------
+
+Больше информации: https://alexell.ru

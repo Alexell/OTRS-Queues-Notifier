@@ -1,0 +1,7 @@
+inherited MainForm_Macintosh: TMainForm_Macintosh
+  DesignerMasterStyle = 0
+  inherited ListBox: TListBox
+    Viewport.Width = 156.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+end

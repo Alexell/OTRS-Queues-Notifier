@@ -1,0 +1,10 @@
+inherited MainForm_Windows: TMainForm_Windows
+  DesignerMasterStyle = 0
+  inherited ShowPassButton: TButton
+    Text = ''
+  end
+  inherited ListBox: TListBox
+    Viewport.Width = 156.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+end

@@ -1,0 +1,68 @@
+inherited MainForm_iPhone55in: TMainForm_iPhone55in
+  ClientHeight = 716
+  ClientWidth = 414
+  DesignerMasterStyle = 0
+  inherited AuthBox: TGroupBox
+    Size.Width = 401.000000000000000000
+    Size.Height = 145.000000000000000000
+    inherited Label2: TLabel
+      Position.Y = 80.000000000000000000
+    end
+    inherited Label3: TLabel
+      Position.Y = 112.000000000000000000
+    end
+    inherited AdressEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited LoginEdit: TEdit
+      Position.Y = 80.000000000000000000
+      Size.Height = 30.000000000000000000
+    end
+    inherited PassEdit: TEdit
+      Position.Y = 112.000000000000000000
+      Size.Height = 30.000000000000000000
+    end
+    inherited Label7: TLabel
+      Position.Y = 56.000000000000000000
+    end
+  end
+  inherited SettingBox: TGroupBox
+    Position.Y = 152.000000000000000000
+    Size.Width = 401.000000000000000000
+    inherited MinEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited FileEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+    inherited PlayButton: TButton
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+    end
+    inherited StopButton: TButton
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+    end
+    inherited KolEdit: TEdit
+      Size.Height = 30.000000000000000000
+    end
+  end
+  inherited ShowPassButton: TButton
+    Position.Y = 120.000000000000000000
+    Size.Width = 57.000000000000000000
+  end
+  inherited ToolBar: TToolBar
+    Position.Y = 672.000000000000000000
+    Size.Width = 414.000000000000000000
+    Size.Height = 44.000000000000000000
+    inherited MenuButton: TSpeedButton
+      Position.X = 365.000000000000000000
+      Size.Width = 44.000000000000000000
+      Size.Height = 44.000000000000000000
+    end
+  end
+  inherited ListBox: TListBox
+    Viewport.Width = 156.000000000000000000
+    Viewport.Height = 165.000000000000000000
+  end
+end
