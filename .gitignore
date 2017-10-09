@@ -3,3 +3,4 @@ __astcache
 __recovery
 Win32
 *.local
+*.stat

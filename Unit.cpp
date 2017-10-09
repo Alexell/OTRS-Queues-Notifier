@@ -13,10 +13,8 @@
 #pragma resource ("*.Macintosh.fmx", _PLAT_MACOS)
 #pragma resource ("*.iPhone.fmx", _PLAT_IOS)
 #pragma resource ("*.iPhone4in.fmx", _PLAT_IOS)
-#pragma resource ("*.iPhone55in.fmx", _PLAT_IOS)
 #pragma resource ("*.iPhone47in.fmx", _PLAT_IOS)
 #pragma resource ("*.LgXhdpiPh.fmx", _PLAT_ANDROID)
-#pragma resource ("*.iPad.fmx", _PLAT_IOS)
 
 TMainForm *MainForm;
 
@@ -216,7 +214,7 @@ void __fastcall TMainForm::ForumItemClick(TObject *Sender)
 void __fastcall TMainForm::AboutItemClick(TObject *Sender)
 {
 	ListBox->Visible=false;
-	ShowMessage("About OTRS Queues Notifier\n\nVersion: 1.0 (27.04.2016)\nCreator: Alexell Production\n\nAlexell.Ru");
+	ShowMessage("About OTRS Queues Notifier\n\nVersion: 1.1 (09.10.2017)\nCreator: Alexell Production\n\nAlexell.Ru");
 
 }
 //---------------------------------------------------------------------------
