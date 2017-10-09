@@ -313,15 +313,20 @@ object MainForm: TMainForm
     HandleRedirects = True
     ProxyParams.BasicAuthentication = False
     ProxyParams.ProxyPort = 0
+    Request.CacheControl = 'no-cache'
+    Request.ContentLanguage = 'en'
     Request.ContentLength = -1
     Request.ContentRangeEnd = -1
     Request.ContentRangeStart = -1
     Request.ContentRangeInstanceLength = -1
+    Request.Pragma = 'no-cache'
     Request.Accept = 'text/html,application/xhtml+xml,application/xml;q=0.9,*/*;q=0.8'
+    Request.AcceptEncoding = 'utf-8'
+    Request.AcceptLanguage = 'en-us'
     Request.BasicAuthentication = False
     Request.UserAgent = 
-      'Mozilla/5.0 (Windows NT 6.1; WOW64; rv:45.0) Gecko/20100101 Fire' +
-      'fox/45.0'
+      'Mozilla/5.0 (Windows NT 10.0; Win64; x64; en; rv:56.0) Gecko/201' +
+      '00101 Firefox/56.0'
     Request.Ranges.Units = 'bytes'
     Request.Ranges = <>
     HTTPOptions = [hoForceEncodeParams]

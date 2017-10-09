@@ -73,16 +73,33 @@ void __fastcall TMainForm::StartButtonClick(TObject *Sender)
 	delete Settings;
 
 	//Log-In
-	Send=AdressEdit->Text+"?Action=Login&RequestedURL=&Lang=ru&TimeOffset=-180&User="+LoginEdit->Text+"&Password="+PassEdit->Text;
+	Send=AdressEdit->Text+"?Action=Login&RequestedURL=?Action=AgentPreferences&Lang=en&TimeOffset=-180&User="+LoginEdit->Text+"&Password="+PassEdit->Text;
+	Sheet->Text=Web->Get(Send);
+
+	//Get ChallengeToken
+	for (int i = 0; i < Sheet->Count; i++)
+	{
+		if(Sheet->Strings[i].Pos("ChallengeToken="))
+		{
+			Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("ChallengeToken=")+15,Sheet->Strings[i].Pos(";\"")-2);
+			Temp=Temp.SubString(0,Temp.Pos(";\"")-1);
+		}
+	}
+
+	//Set OTRS language = English
+	Send=AdressEdit->Text+"?ChallengeToken="+Temp+"&Action=AgentPreferences&Subaction=Update&Group=Language&UserLanguage=en: undefined";
 	Web->Get(Send);
-	Sheet->Text=Web->Get(AdressEdit->Text+"?Action=AgentTicketQueue");
+
+	Send=AdressEdit->Text+"?Action=AgentTicketQueue";
+	Sheet->Text=Web->Get(Send);
+
 	if(Sheet->Text.Pos("My Queues ("))
 	{
 		for (int i = 0; i < Sheet->Count; i++)
 		{
-			if(Sheet->Strings[i].Pos("My Queues: ("))
+			if(Sheet->Strings[i].Pos("My Queues ("))
 			{
-				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My Queues (")+13,Sheet->Strings[i].Pos(")</a>")-4);
+				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My Queues (")+11,Sheet->Strings[i].Pos(")</a>")-4);
 				Temp=Temp.SubString(0,Temp.Pos(")</a>")-1);
 				TicketLabel->Enabled=true;
 				KolLabel->Enabled=true;
@@ -110,10 +127,12 @@ void __fastcall TMainForm::TimerTimer(TObject *Sender)
 		{
 			if(Sheet->Strings[i].Pos("My Queues ("))
 			{
-				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My Queues (")+13,Sheet->Strings[i].Pos(")</a>")-4);
+				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My Queues (")+11,Sheet->Strings[i].Pos(")</a>")-4);
 				Temp=Temp.SubString(0,Temp.Pos(")</a>")-1);
 				KolLabel->Text=Temp;
+				Temp=Temp.SubString(0,Temp.Pos("/")-1);
 				kol=StrToInt(Temp);
+
 				if(kol>StrToInt(KolEdit->Text))
 				{
 					KolLabel->FontColor=claRed;

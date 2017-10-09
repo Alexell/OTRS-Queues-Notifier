@@ -7,7 +7,7 @@
 #pragma hdrstop
 #include <System.StartUpCopy.hpp>
 //---------------------------------------------------------------------------
-USEFORM("Unit.cpp", Form1);
+USEFORM("Unit.cpp", MainForm);
 //---------------------------------------------------------------------------
 extern "C" int FMXmain()
 {
