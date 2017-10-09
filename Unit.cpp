@@ -16,6 +16,7 @@
 #pragma resource ("*.iPhone55in.fmx", _PLAT_IOS)
 #pragma resource ("*.iPhone47in.fmx", _PLAT_IOS)
 #pragma resource ("*.LgXhdpiPh.fmx", _PLAT_ANDROID)
+#pragma resource ("*.iPad.fmx", _PLAT_IOS)
 
 TMainForm *MainForm;
 
@@ -32,7 +33,7 @@ __fastcall TMainForm::TMainForm(TComponent* Owner)
 
 void __fastcall TMainForm::FormShow(TObject *Sender)
 {
-	//Загружаем настройки
+	//Load settings
 	Settings = new TIniFile(GetCurrentDir()+"\\settings.ini");
 	AdressEdit->Text=Settings->ReadString("Auth","Adress","");
 	LoginEdit->Text=Settings->ReadString("Auth","Login","");
@@ -51,7 +52,7 @@ void __fastcall TMainForm::FormShow(TObject *Sender)
 
 void __fastcall TMainForm::StartButtonClick(TObject *Sender)
 {
-	//Делаем настройки недоступными
+	//Disable some settings
 	AdressEdit->Enabled=false;
 	LoginEdit->Enabled=false;
 	PassEdit->Enabled=false;
@@ -59,7 +60,7 @@ void __fastcall TMainForm::StartButtonClick(TObject *Sender)
 	MinEdit->Enabled=false;
 	StartButton->Enabled=false;
 
-	//Сохраняем настройки
+	//Save settings
 	Settings = new TIniFile(GetCurrentDir()+"\\settings.ini");
 	Settings->WriteString("Auth","Adress",AdressEdit->Text);
 	Settings->WriteString("Auth","Login",LoginEdit->Text);
@@ -71,17 +72,17 @@ void __fastcall TMainForm::StartButtonClick(TObject *Sender)
 	Player->FileName=FileEdit->Text;
 	delete Settings;
 
-	//Авторизуемся
+	//Log-In
 	Send=AdressEdit->Text+"?Action=Login&RequestedURL=&Lang=ru&TimeOffset=-180&User="+LoginEdit->Text+"&Password="+PassEdit->Text;
 	Web->Get(Send);
 	Sheet->Text=Web->Get(AdressEdit->Text+"?Action=AgentTicketQueue");
-	if(Sheet->Text.Pos("Мои очереди ("))
+	if(Sheet->Text.Pos("My Queues ("))
 	{
 		for (int i = 0; i < Sheet->Count; i++)
 		{
-			if(Sheet->Strings[i].Pos("My queues: ("))
+			if(Sheet->Strings[i].Pos("My Queues: ("))
 			{
-				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My queues (")+13,Sheet->Strings[i].Pos(")</a>")-4);
+				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My Queues (")+13,Sheet->Strings[i].Pos(")</a>")-4);
 				Temp=Temp.SubString(0,Temp.Pos(")</a>")-1);
 				TicketLabel->Enabled=true;
 				KolLabel->Enabled=true;
@@ -103,13 +104,13 @@ void __fastcall TMainForm::StartButtonClick(TObject *Sender)
 void __fastcall TMainForm::TimerTimer(TObject *Sender)
 {
 	Sheet->Text=Web->Get(AdressEdit->Text+"?Action=AgentTicketQueue");
-	if(Sheet->Text.Pos("My queues ("))
+	if(Sheet->Text.Pos("My Queues ("))
 	{
 		for (int i = 0; i < Sheet->Count; i++)
 		{
-			if(Sheet->Strings[i].Pos("My queues ("))
+			if(Sheet->Strings[i].Pos("My Queues ("))
 			{
-				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My queues (")+13,Sheet->Strings[i].Pos(")</a>")-4);
+				Temp=Sheet->Strings[i].SubString(Sheet->Strings[i].Pos("My Queues (")+13,Sheet->Strings[i].Pos(")</a>")-4);
 				Temp=Temp.SubString(0,Temp.Pos(")</a>")-1);
 				KolLabel->Text=Temp;
 				kol=StrToInt(Temp);

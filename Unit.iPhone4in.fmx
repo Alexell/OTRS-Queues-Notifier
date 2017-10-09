@@ -3,6 +3,7 @@ inherited MainForm_iPhone4in: TMainForm_iPhone4in
   ClientWidth = 320
   DesignerMasterStyle = 0
   inherited AuthBox: TGroupBox
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     inherited AdressEdit: TEdit
       Size.Height = 30.000000000000000000
     end
@@ -14,6 +15,7 @@ inherited MainForm_iPhone4in: TMainForm_iPhone4in
     end
   end
   inherited SettingBox: TGroupBox
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     inherited MinEdit: TEdit
       Size.Height = 30.000000000000000000
     end
@@ -32,6 +34,12 @@ inherited MainForm_iPhone4in: TMainForm_iPhone4in
       Size.Height = 30.000000000000000000
     end
   end
+  inherited TicketLabel: TLabel
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
+  inherited KolLabel: TLabel
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
+  end
   inherited ToolBar: TToolBar
     Position.Y = 504.000000000000000000
     Size.Width = 320.000000000000000000
@@ -43,7 +51,7 @@ inherited MainForm_iPhone4in: TMainForm_iPhone4in
     end
   end
   inherited ListBox: TListBox
-    Viewport.Width = 156.000000000000000000
-    Viewport.Height = 165.000000000000000000
+    Viewport.Width = 160.000000000000000000
+    Viewport.Height = 169.000000000000000000
   end
 end

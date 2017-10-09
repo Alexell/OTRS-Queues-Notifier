@@ -36,7 +36,7 @@ object MainForm: TMainForm
     Size.Height = 137.000000000000000000
     Size.PlatformDefault = False
     Text = 'Sign-In'
-    TextSettings.Font.Style = [fsBold]
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     TabOrder = 1
     object Label1: TLabel
       Position.X = 16.000000000000000000
@@ -109,7 +109,7 @@ object MainForm: TMainForm
     Size.Height = 153.000000000000000000
     Size.PlatformDefault = False
     Text = 'Settings'
-    TextSettings.Font.Style = [fsBold]
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     TabOrder = 2
     object MinEdit: TEdit
       Touch.InteractiveGestures = [LongTap, DoubleTap]
@@ -223,7 +223,7 @@ object MainForm: TMainForm
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
     TextSettings.Font.Size = 16.000000000000000000
-    TextSettings.Font.Style = [fsBold]
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     Text = 'My queues:'
   end
   object KolLabel: TLabel
@@ -235,7 +235,7 @@ object MainForm: TMainForm
     Size.Height = 25.000000000000000000
     Size.PlatformDefault = False
     TextSettings.Font.Size = 16.000000000000000000
-    TextSettings.Font.Style = [fsBold]
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     Text = '0'
   end
   object Label5: TLabel

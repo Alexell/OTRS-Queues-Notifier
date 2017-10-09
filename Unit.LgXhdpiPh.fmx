@@ -14,6 +14,7 @@ inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
   inherited AuthBox: TGroupBox
     Size.Width = 433.000000000000000000
     Size.Height = 177.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     inherited Label2: TLabel
       Position.Y = 96.000000000000000000
     end
@@ -42,6 +43,7 @@ inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
     Position.Y = 208.000000000000000000
     Size.Width = 433.000000000000000000
     Size.Height = 169.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
     inherited MinEdit: TEdit
       Position.X = 200.000000000000000000
       Size.Height = 32.000000000000000000
@@ -84,10 +86,12 @@ inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
   inherited TicketLabel: TLabel
     Position.X = 152.000000000000000000
     Position.Y = 432.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited KolLabel: TLabel
     Position.X = 280.000000000000000000
     Position.Y = 432.000000000000000000
+    TextSettings.Font.StyleExt = {00070000000000000004000000}
   end
   inherited Label5: TLabel
     Position.X = 248.000000000000000000
@@ -110,8 +114,8 @@ inherited MainForm_LgXhdpiPh: TMainForm_LgXhdpiPh
     end
   end
   inherited ListBox: TListBox
-    Viewport.Width = 156.000000000000000000
-    Viewport.Height = 165.000000000000000000
+    Viewport.Width = 160.000000000000000000
+    Viewport.Height = 169.000000000000000000
   end
   inherited WebCookie: TIdCookieManager
     Top = 448
